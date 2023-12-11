@@ -11,13 +11,13 @@ logger.setLevel(logging.INFO) # can be changed to logging.DEBUG for debugging is
 
 class Plugin:
     async def up(self):
-        subprocess.run(["tailscale", "up"], timeout=10)
+        subprocess.run(["/home/deck/.nix-profile/bin/tailscale", "up"], timeout=10)
         return True
 
     async def down(self):
-        subprocess.run(["tailscale", "down"], timeout=10)
+        subprocess.run(["/home/deck/.nix-profile/bin/tailscale", "down"], timeout=10)
         return True
 
     async def get_tailscale_state(self):
-        result = not subprocess.call(["tailscale", "status"], timeout=10)
+        result = not subprocess.call(["/home/deck/.nix-profile/bin/tailscale", "status"], timeout=10)
         return result

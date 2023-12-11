@@ -1,3 +1,5 @@
+fork to work with nix install.
+
 # Tailscale Control
 
 A Decky plugin to activate and deactivate Tailscale, while staying in Gaming mode. 
